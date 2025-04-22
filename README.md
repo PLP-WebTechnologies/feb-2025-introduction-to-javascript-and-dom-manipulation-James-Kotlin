@@ -68,7 +68,7 @@ Happy Coding! 💻✨
     <script src="script.js"></script>
 </body>
 </html>
-javascript file.
+
 // Change text content dynamically
 document.getElementById("change-text-btn").addEventListener("click", () => {
     const title = document.getElementById("title");
