@@ -24,3 +24,73 @@ Respond to user interactions.
 - Ensure semantic correctness.
 
 Happy Coding! 💻✨
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Interaction with JavaScript</title>
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .highlight {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="title">Welcome to My Interactive Page</h1>
+    </header>
+
+    <main>
+        <article>
+            <p id="description">This is a simple example demonstrating JavaScript interactivity.</p>
+        </article>
+        
+        <section>
+            <button id="change-text-btn">Change Text</button>
+            <button id="toggle-element-btn">Add/Remove Element</button>
+        </section>
+
+        <div id="element-container"></div>
+    </main>
+
+    <footer>
+        <p>Enjoy experimenting with JavaScript!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+javascript file.
+// Change text content dynamically
+document.getElementById("change-text-btn").addEventListener("click", () => {
+    const title = document.getElementById("title");
+    const description = document.getElementById("description");
+
+    // Change text and style
+    title.textContent = "Text Changed Dynamically!";
+    title.classList.add("highlight");
+    description.textContent = "The text content of this page has been updated via JavaScript.";
+});
+
+// Add/Remove an element
+document.getElementById("toggle-element-btn").addEventListener("click", () => {
+    const container = document.getElementById("element-container");
+    const existingElement = document.getElementById("dynamic-element");
+
+    if (existingElement) {
+        container.removeChild(existingElement); // Remove element
+    } else {
+        const newElement = document.createElement("div");
+        newElement.id = "dynamic-element";
+        newElement.textContent = "I'm a dynamically added element!";
+        container.appendChild(newElement); // Add element
+    }
+});
