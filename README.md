@@ -70,17 +70,20 @@ Happy Coding! 💻✨
 </html>
 
 // Change text content dynamically
+
 document.getElementById("change-text-btn").addEventListener("click", () => {
     const title = document.getElementById("title");
     const description = document.getElementById("description");
 
     // Change text and style
+    
     title.textContent = "Text Changed Dynamically!";
     title.classList.add("highlight");
     description.textContent = "The text content of this page has been updated via JavaScript.";
 });
 
 // Add/Remove an element
+
 document.getElementById("toggle-element-btn").addEventListener("click", () => {
     const container = document.getElementById("element-container");
     const existingElement = document.getElementById("dynamic-element");
